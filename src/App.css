@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-panel {
+  width: 50%;
+  background-color: #0a192f;
+  color: #ccd6f6;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.right-panel {
+  width: 50%;
+  overflow-y: scroll;
+  background-color: #112240;
+  color: #ccd6f6;
+  padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64ffda;
+  border-radius: 4px;
+}
+
+
+.left-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.left-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.left-panel .social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.left-panel .social-links li {
+  margin: 0.5rem 0;
+}
+
+.left-panel .social-links a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+
+.right-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.right-panel .experience-item, 
+.right-panel .project-item {
+  margin-bottom: 2rem;
+}
+
+.right-panel h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
