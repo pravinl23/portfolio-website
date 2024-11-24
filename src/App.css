@@ -1,27 +1,29 @@
-.app {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-}
-
+/* Left Panel */
 .left-panel {
-  width: 50%;
-  background-color: #0a192f;
+  width: 40%;
+  background-color: #1e3b39; /* Darker background */
   color: #ccd6f6;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: fixed;
+  height: 100vh;
+  z-index: 10;
 }
 
+/* Right Panel */
 .right-panel {
-  width: 50%;
+  margin-left: 40%;
+  width: 60%;
   overflow-y: scroll;
-  background-color: #112240;
+  background-color: #1e293b; /* Darker background */
   color: #ccd6f6;
   padding: 2rem;
+  scroll-behavior: snap;
 }
 
+/* Smooth Scroll Styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -31,43 +33,33 @@
   border-radius: 4px;
 }
 
-
-.left-panel h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+/* Left Panel Content Styling */
+.left-panel h1, .left-panel h2, .nav-links a {
+  color: #64ffda; /* Cool blue text */
 }
 
-.left-panel h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+/* Right Panel Content Styling */
+.right-panel h2, .right-panel h3 {
+  color: #64ffda; /* Cool blue text */
 }
 
-.left-panel .social-links {
+/* Nav Links */
+.nav-links {
   list-style: none;
   padding: 0;
+  margin-top: 2rem;
 }
 
-.left-panel .social-links li {
-  margin: 0.5rem 0;
+.nav-links li {
+  margin: 1rem 0;
 }
 
-.left-panel .social-links a {
-  color: #64ffda;
+.nav-links a {
   text-decoration: none;
+  color: #64ffda;
+  font-size: 1.1rem;
 }
 
-
-.right-panel h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.right-panel .experience-item, 
-.right-panel .project-item {
-  margin-bottom: 2rem;
-}
-
-.right-panel h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.nav-links a:hover {
+  text-decoration: underline;
 }
